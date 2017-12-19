@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
+
+    <title>Where's Rudolph?</title>
+</head>
+<body onload="rudolph()">
+    
+    <style>
+  
+           .head h1 {
+                color:#ff3344;
+                font-size:50px;
+                font-family:"Risque";
+            
+            }
+            
+            .head {
+                width:300px;
+                border-radius:20px;
+                background-color:white;
+                padding:20px;
+                text-align:center;
+            }
+            
+            body {
+                
+                 background-image: url("wheres-santa-9781481406192.in03.jpg");
+                 background-color:brown;
+                 display:flex;
+                 justify-content:center;
+            }
+            
+            img {
+                position:absolute;
+                left:230px;
+                top:260px;
+                width:90px;
+                transform:scaleX(-1);
+            }
+            
+    </style>
+    <div class="head">
+      <h1>Find Rudolph</h1>
+    </div>
+        <div id="mainscreen">
+        
+    <img id="rudolph"
+             onclick="alert('Woohoo, you win! You found Rudolph!');">
+             
+        </div>
+    <script>
+    
+        function beginGame(){
+            document.getElementById('splash').setAttribute("class", "start");
+        }
+        
+        function rudolph() {
+                document.getElementById("rudolph").src = "http://disney-christmas-wallpaper.disneyandpals.com/_/rsrc/1447257725998/rudolph-the-red-nosed-reindeer/cute%20rudolph%20the%20red%20nosed%20reindeer%204.png?height=400&width=400";
+            }
+    </script>
+</body>
+</html>
